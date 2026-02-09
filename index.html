@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Buzz - Ultimate GK Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Start Screen -->
+    <section id="start-screen" class="screen active">
+        <div class="glass-container">
+            <h1 class="logo">Quiz <span class="highlight">Buzz</span></h1>
+            <p class="tagline">Challenge your mind with 500+ General Knowledge Questions</p>
+
+            <div class="stats-preview">
+                <div class="stat-item">
+                    <i class="fas fa-brain"></i>
+                    <span>GK & Trivia</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-stopwatch"></i>
+                    <span>Timed Mode</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-trophy"></i>
+                    <span>Global Rank</span>
+                </div>
+            </div>
+
+            <button id="start-btn" class="btn primary-btn">Start Quiz <i class="fas fa-play"></i></button>
+            <button id="settings-btn" class="btn secondary-btn"><i class="fas fa-cog"></i> Settings</button>
+        </div>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section id="quiz-screen" class="screen hidden">
+        <div class="glass-container quiz-container">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="header-info">
+                    <span id="question-count">Question 1</span>
+                    <span id="score-display">Score: 0</span>
+                </div>
+            </div>
+
+            <div class="question-box">
+                <h2 id="question-text">Loading question...</h2>
+            </div>
+
+            <div class="options-grid" id="options-container">
+                <!-- Options will be injected here -->
+            </div>
+
+            <div class="quiz-footer">
+                <button id="next-btn" class="btn primary-btn hidden">Next Question <i
+                        class="fas fa-arrow-right"></i></button>
+                <div id="feedback-msg" class="feedback"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Screen -->
+    <section id="result-screen" class="screen hidden">
+        <div class="glass-container result-container">
+            <i class="fas fa-crown result-icon"></i>
+            <h2>Quiz Completed!</h2>
+            <div class="score-card">
+                <p>Your Score</p>
+                <h1 id="final-score">0</h1>
+                <p id="total-questions-display">out of 10</p>
+            </div>
+
+            <p id="result-message">Great job!</p>
+
+            <div class="action-buttons">
+                <button id="restart-btn" class="btn primary-btn"><i class="fas fa-redo"></i> Play Again</button>
+                <button id="home-btn" class="btn secondary-btn"><i class="fas fa-home"></i> Home</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
